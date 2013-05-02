@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <body>
+        <h1>Hello <span class="name"></span></h1>
+
+        <script type="text/javascript">
+            var require = {
+                paths: {
+                    'bar': 'res/concated',
+                    'baz': 'res/concated'
+                }
+            };
+        </script>
+        <script src="require.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            require( ['bar', 'baz'], function(bar, baz) {
+                bar.r();
+                baz.z();
+            });
+        </script>
+    </body>
+</html>
